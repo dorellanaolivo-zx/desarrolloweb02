@@ -199,6 +199,16 @@ footer h2
 
 @media (max-width:900px)
 {
+  header
+  {
+    text-align: center !important;
+  }
+  nav
+  {
+    text-align: center !important;
+    width: 100%;
+  }
+
   #contenido
   {
     width: 100%;
