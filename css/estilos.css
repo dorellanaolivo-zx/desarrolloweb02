@@ -9,11 +9,11 @@
   src: url('DancingScript-Regular.ttf');
 }
 
-@keyframes sube
+@keyframes slidein
 {
   0%
   {
-    margin-top: 120%
+    margin-top: 150%
   }
   60%
   {
@@ -27,15 +27,15 @@
 
 body
 {
-  background-color: aliceblue;
+  background-color: #02010a;
   font-family: 'Dancing Script', cursive;
 }
 
-#contenedor
+#contenido
 {
-    width: 70%;
+    width: 900px;
     margin: 0 auto;
-    animation: sube 2s;
+    animation: slidein 2s;
 }
 
 header
@@ -98,7 +98,6 @@ section
 
 section article img
 {
-    width:35%;
     box-shadow: 2px 2px #02010a;
     display: block;
     margin: 0 auto;
@@ -121,6 +120,11 @@ section article img
     padding: 10px;
 }
 
+#paisajes a, #retratos a
+{
+    color: black;
+}
+
 #paisajes img, #retratos img
 {
     transition: transform 1s;
@@ -136,6 +140,31 @@ section article img
 {
   transform: translate(20px,-5px);
   box-shadow: 2px 2px 2px #82c3a6;
+}
+
+.retrato
+{
+    width: 30%;
+    margin: 1.5%;
+    border: none;
+}
+
+.blur
+{
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.gray
+{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.sepia
+{
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
 }
 
 footer
@@ -166,4 +195,29 @@ footer h2
 #redes img
 {
   width: 10%;
+}
+
+@media (max-width:900px)
+{
+  #contenido
+  {
+    width: 100%;
+  }
+
+  #paisajes, #retratos
+  {
+    width: 100%;
+  }
+  #contacto, #terminos, #sociales, #derechos
+  {
+    width: 100%;
+    padding: 20px;
+  }
+  .retrato
+  {
+	  vertical-align:middle;
+    width: 100%;
+    padding: 20px;
+    border: none;
+  }
 }
